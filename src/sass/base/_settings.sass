@@ -40,3 +40,32 @@ input
   width: 100%
   margin: 0 auto
   padding: 0 40px
+
+.subtitle
+  max-width: 440px
+  line-height: 1.4
+  color: var(--color-gray)
+  font-weight: 400
+  font-size: 16px
+
+.btn
+  @include flexbox
+  align-items: center
+  justify-content: center
+  width: 252px
+  height: 67px
+  border-radius: 99px
+  border: 1px solid rgba(255,255,255,.25)
+  color: rgba(255,255,255,.4)
+  font-weight: 500
+  gap: 16px
+  span
+    color: #fff
+    font-weight: 400
+  &::after
+    content: ''
+    display: block
+    width: 22px
+    height: 22px
+    border-radius: 100%
+    background: rgba(255,255,255,.15) url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.752 15.004L9 14.268L12.056 11.252L9 8.236L9.752 7.5L13.504 11.252L9.752 15.004Z' fill='%23FAFAFA'/%3E%3C/svg%3E%0A") no-repeat center
