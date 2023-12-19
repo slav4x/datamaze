@@ -1,0 +1,71 @@
+.team
+  padding: 140px 0 200px
+  &-title
+    font-size: 90px
+    font-weight: 400
+    line-height: 1
+    margin-bottom: 24px
+  &-slider
+    margin-top: 48px
+    .swiper-slide-active,
+    .swiper-slide-next,
+    .swiper-slide-next + .swiper-slide
+      .team-item
+        opacity: 1
+  &-item
+    border-radius: 4px
+    background: linear-gradient(171deg, rgba(9, 20, 58, 0.52) 7.1%, rgba(1, 8, 27, 0.14) 77.92%), linear-gradient(171deg, rgba(9, 20, 58, 0.52) 7.1%, #01081B 77.92%)
+    height: 608px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    padding: 32px
+    border: 1px solid transparent
+    -webkit-backface-visibility: hidden
+    backface-visibility: hidden
+    will-change: transform
+    transition: .25s
+    position: relative
+    overflow: hidden
+    opacity: 0.5
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      top: 0
+      background: url(../img/team-item.png) no-repeat bottom left
+      opacity: 0
+      transition: .25s
+    &__text
+      margin-top: auto
+      width: 100%
+      max-width: 350px
+      position: relative
+      z-index: 5
+      h4
+        font-size: 20px
+        font-weight: 400
+        line-height: 1
+        margin-bottom: 16px
+      span
+        line-height: 1.4
+        color: var(--color-gray)
+        transition: .25s
+      p
+        line-height: 1.4
+        color: var(--color-gray)
+        padding-top: 6px
+        max-height: 0px
+        overflow: hidden
+        transition: .25s
+    &:hover
+      border-color: rgba(255,255,255,.1)
+      &::before
+        opacity: 1
+      .team-item__text
+        span
+          font-size: 14px
+        p
+          max-height: 130px

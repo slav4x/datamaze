@@ -25,4 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   maskPhone();
+
+  const teamSlider = new Swiper('.team-slider', {
+    spaceBetween: 12,
+    slidesPerView: 3,
+  });
 });
