@@ -1,0 +1,103 @@
+.faq
+  padding: 120px 0
+  .container
+    &::before
+      content: ''
+      position: absolute
+      top: -900px
+      left: -860px
+      width: 980px
+      height: 980px
+      background: #115ffa
+      border-radius: 100%
+      filter: blur(460.5px)
+      opacity: 0.4
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      will-change: transform
+      z-index: -1
+    &::after
+      content: ''
+      position: absolute
+      bottom: -670px
+      right: -380px
+      width: 980px
+      height: 980px
+      background: #115ffa
+      border-radius: 100%
+      filter: blur(460.5px)
+      opacity: 0.4
+      -webkit-backface-visibility: hidden
+      backface-visibility: hidden
+      will-change: transform
+      z-index: -1
+  &-title
+    text-align: center
+    font-size: 90px
+    line-height: 1
+    font-weight: 400
+    margin-bottom: 24px
+  .subtitle
+    margin: 0 auto
+    text-align: center
+  &-list
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    gap: 12px
+    margin-top: 40px
+  &-item
+    padding: 0 24px
+    width: 100%
+    border-radius: 12px
+    border: 1px solid rgba(255, 255, 255, 0.15)
+    background: radial-gradient(157.94% 154.96% at 29.92% 13.65%, rgba(94, 103, 135, 0.00) 0%, #171B29 100%)
+    position: relative
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      margin: auto 0
+      width: 1px
+      height: 16px
+      background: #fff
+    &::before
+      left: 0
+    &::after
+      right: 0
+    &__title
+      padding: 24px 0 23px
+      font-size: 22px
+      font-weight: 500
+      cursor: pointer
+      border-bottom: 1px solid transparent
+      position: relative
+      transition: .25s
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        width: 13px
+        height: 8px
+        margin: auto 0
+        background: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 13 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6.5 7L12 1' stroke='white'/%3E%3C/svg%3E%0A") no-repeat center
+        transition: .25s
+    &__content
+      max-height: 0
+      overflow: hidden
+      transition: max-height .4s ease
+    &__text
+      padding: 36px 0
+      max-width: 745px
+      line-height: 1.8
+      font-size: 18px
+    &.open
+      .faq-item__title
+        border-color: rgba(255,255,255,.15)
+        &::after
+          transform: rotate(180deg)
+      .faq-item__content
+        max-height: 400px

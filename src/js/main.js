@@ -42,4 +42,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   window.addEventListener('scroll', checkScroll);
+
+  const faq = document.querySelector('.faq');
+  if (faq) {
+    const faqItem = faq.querySelectorAll('.faq-item');
+    faqItem.forEach((item) => {
+      const title = item.querySelector('.faq-item__title');
+      const text = item.querySelector('.faq-item__content');
+      title.addEventListener('click', function () {
+        item.classList.toggle('open');
+      });
+    });
+  }
 });
