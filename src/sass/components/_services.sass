@@ -26,3 +26,74 @@
   .subtitle
     margin: 0 auto
     text-align: center
+  &-page
+    padding-top: 190px
+    position: relative
+    min-height: 100vh
+    &__glow
+      position: absolute
+      bottom: -740px
+      left: 50%
+      transform: translateX(-50%)
+      margin: 0 auto
+      max-width: initial
+    &__title
+      font-size: 80px
+      font-weight: 400
+      line-height: 1
+      margin-bottom: 36px
+    &__bg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      max-width: initial
+      width: 100%
+  &-grid
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 24px
+    padding: 140px 0
+  &-item
+    padding: 36px
+    @include flexbox
+    flex-direction: column
+    align-items: flex-start
+    border-radius: 12px
+    border: 1px solid rgba(255, 255, 255, 0.10)
+    background: linear-gradient(171deg, rgba(40, 49, 81, 0.52) 7.1%, rgba(1, 8, 27, 0.14) 77.92%)
+    &__label
+      @include flexbox
+      align-items: center
+      gap: 12px
+      line-height: 22px
+      font-size: 20px
+      margin-bottom: 36px
+    &__title
+      width: 100%
+      font-size: 42px
+      font-weight: 400
+      line-height: 1
+      text-transform: uppercase
+      background: radial-gradient(175.95% 175.95% at 50% 29.52%, #EDFFFF 9.08%, rgba(237, 255, 255, 0.00) 100%)
+      background-clip: text
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    &__list
+      margin-bottom: 36px
+      counter-reset: list
+      li
+        margin-top: 36px
+        line-height: 1.4
+        span
+          font-weight: 500
+          &::before
+            counter-increment: list
+            content: counter(list, decimal-leading-zero) '.'
+            padding-right: 5px
+        p
+          color: var(--color-gray)
+          margin-top: 16px
+    .btn
+      width: 100%
+      margin-top: auto
