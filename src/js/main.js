@@ -30,4 +30,16 @@ document.addEventListener('DOMContentLoaded', function () {
     spaceBetween: 12,
     slidesPerView: 3,
   });
+
+  const header = document.querySelector('.header');
+
+  function checkScroll() {
+    if (window.scrollY > 10) {
+      header.classList.add('fixed');
+    } else {
+      header.classList.remove('fixed');
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
 });
