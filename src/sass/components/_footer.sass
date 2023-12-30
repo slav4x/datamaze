@@ -12,6 +12,10 @@
     right: 0
     height: 200px
     background: linear-gradient(180deg, #020615 0%, rgba(2, 6, 21, 0.00) 100%)
+    z-index: 3
+    pointer-events: none
+  .container
+    pointer-events: none
   &-label
     @include flexbox
     align-items: center
@@ -25,9 +29,10 @@
       line-height: 1.1
       margin-bottom: 12px
     p
-      flex: 1
+      max-width: calc(100% - 190px)
       font-size: 44px
       line-height: 1.2
+      pointer-events: auto
     a
       display: block
       padding: 15px 31px
@@ -38,6 +43,8 @@
       background: rgba(255,255,255,.05)
       backdrop-filter: blur(4px)
       border-radius: 99px
+      pointer-events: auto
+      margin-left: auto
       i
         font-style: normal
         color: #fff
@@ -54,6 +61,7 @@
     li a
       color: rgba(255,255,255,.7)
       transition: .25s
+      pointer-events: auto
       &:hover
         color: #fff
   &-glow
@@ -63,3 +71,16 @@
     transform: translateX(-50%)
     margin: 0 auto
     max-width: initial
+    pointer-events: none
+  &-map
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100% !important
+      height: 100% !important
