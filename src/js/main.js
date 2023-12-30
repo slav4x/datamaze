@@ -48,10 +48,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const faqItem = faq.querySelectorAll('.faq-item');
     faqItem.forEach((item) => {
       const title = item.querySelector('.faq-item__title');
-      const text = item.querySelector('.faq-item__content');
       title.addEventListener('click', function () {
         item.classList.toggle('open');
       });
     });
   }
+
+  document.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('.services-section');
+
+    sections.forEach((section) => {
+      const topPosition = section.getBoundingClientRect().top;
+      if (topPosition <= 0) {
+        section.classList.add('show');
+      } else {
+        section.classList.remove('show');
+      }
+    });
+  });
 });
