@@ -18,3 +18,68 @@
     flex-direction: column
     align-items: flex-start
     gap: 48px
+  &-page
+    padding-top: 190px
+    position: relative
+    padding-bottom: 70px
+    .container
+      @include flexbox
+      justify-content: space-between
+    &__content
+      max-width: 650px
+      @include flexbox
+      flex-direction: column
+      align-items: flex-start
+    &__form
+      max-width: 640px
+      width: 100%
+      .contact-form
+        margin-top: 0
+        width: 100%
+    &__title
+      font-size: 80px
+      font-weight: 400
+      line-height: 1
+    &__bg
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      max-width: initial
+      width: 100%
+    &__list
+      margin-top: auto
+      @include flexbox
+      flex-direction: column
+      align-items: flex-start
+      gap: 12px
+      a
+        display: block
+        padding: 15px 31px
+        font-weight: 500
+        line-height: 22px
+        color: rgba(255,255,255,.4)
+        border: 1px solid rgba(255,255,255,.25)
+        background: rgba(255,255,255,.05)
+        backdrop-filter: blur(4px)
+        border-radius: 99px
+        i
+          font-style: normal
+          color: #fff
+    &__label
+      @include flexbox
+      align-items: center
+      padding: 24px 0
+      border-bottom: 1px dashed rgba(255,255,255,.15)
+      width: 100%
+      span
+        display: block
+        width: 100%
+        text-transform: uppercase
+        font-size: 18px
+        line-height: 1.1
+        margin-bottom: 12px
+        opacity: 0.6
+      p
+        font-size: 44px
+        line-height: 1.2
