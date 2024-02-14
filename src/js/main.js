@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const teamSlider = new Swiper('.team-slider', {
     spaceBetween: 12,
-    slidesPerView: 3,
+    slidesPerView: 'auto',
   });
 
   const header = document.querySelector('.header');
