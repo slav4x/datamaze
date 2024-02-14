@@ -66,4 +66,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  const burger = document.querySelector('.header-burger');
+  const nav = document.querySelector('.header-nav');
+  burger.addEventListener('click', function () {
+    header.classList.toggle('show');
+    nav.classList.toggle('show');
+    burger.classList.toggle('show');
+  });
 });

@@ -1,3 +1,36 @@
-@media(max-width: 1024px)
+@media(max-width: 1023px)
   .container
     max-width: 768px
+
+  .hero-bg
+    img
+      position: absolute
+      top: 800px
+      left: 0
+      right: -350px
+
+  .services
+    overflow: hidden
+    .container
+      &::before, &::after
+        display: none
+  .services-section
+    opacity: 1 !important
+
+  .about-glow
+    bottom: 40px
+
+  .services-grid
+    padding: 60px 0
+    grid-template-columns: repeat(1, 1fr)
+
+  .contact-page__content, .contact-page__form
+    width: 100%
+    max-width: 100%
+  .contact-page__form
+    margin-top: 60px
+  .contact-page__list
+    margin-top: 60px
+  .contact-page__list a
+    font-size: 14px
+    padding: 16px 24px
