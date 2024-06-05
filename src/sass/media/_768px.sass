@@ -84,8 +84,13 @@
   .stats-item
     padding: 24px 0 24px 24px
     height: 180px
-  .stats-item.protection p
-    padding-right: 24px
+  .stats-item
+    &.protection,
+    &.satisfied,
+    &.tested,
+    &.pteam
+      p
+        padding-right: 24px
 
   .team
     padding: 40px 0
